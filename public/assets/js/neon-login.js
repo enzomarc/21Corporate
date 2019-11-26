@@ -6,7 +6,7 @@
 
 var neonLogin = neonLogin || {};
 
-;(function($, window, undefined)
+(function($, window, undefined)
 {
 	"use strict";
 	
@@ -61,52 +61,41 @@ var neonLogin = neonLogin || {};
 											
 					// Send data to the server
 					$.ajax({
-						url: baseurl + 'data/sample-login-form.php',
+						url: '/login',
 						method: 'POST',
 						dataType: 'json',
 						data: {
-							username: $("input#username").val(),
+							email: $("input#email").val(),
 							password: $("input#password").val(),
+							_token: token
 						},
-						error: function()
+						error: function(response)
 						{
-							alert("An error occoured!");
+							setTimeout(function()
+							{
+								$(".login-page").removeClass('logging-in');
+								neonLogin.resetProgressBar(true);
+								toastr.error(response.responseJSON.message, "Erreur");
+							}, 1000);
+							console.log(response);
 						},
 						success: function(response)
 						{
-							// Login status [success|invalid]
-							var login_status = response.login_status;
-															
-							// Form is fully completed, we update the percentage
 							neonLogin.setPercentage(100);
-							
-							
-							// We will give some time for the animation to finish, then execute the following procedures	
+
 							setTimeout(function()
 							{
-								// If login is invalid, we store the 
-								if(login_status == 'invalid')
+								setTimeout(function()
 								{
-									$(".login-page").removeClass('logging-in');
-									neonLogin.resetProgressBar(true);
-								}
-								else
-								if(login_status == 'success')
-								{
-									// Redirect to login page
-									setTimeout(function()
+									var redirect_url = baseurl + '/admin';
+
+									if(response.redirect_url && response.redirect_url.length)
 									{
-										var redirect_url = baseurl;
-										
-										if(response.redirect_url && response.redirect_url.length)
-										{
-											redirect_url = response.redirect_url;
-										}
-										
-										window.location.href = redirect_url;
-									}, 400);
-								}
-								
+										redirect_url = response.redirect_url;
+									}
+
+									window.location.href = redirect_url;
+								}, 400);
 							}, 1000);
 						}
 					});

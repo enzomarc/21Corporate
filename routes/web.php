@@ -16,10 +16,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
-Route::group(['prefix' => 'admin'], function () {
+// Admin authentication routes
+Route::get('login', 'Auth\LoginController@login')->name('login');
+Route::post('login', 'Auth\LoginController@auth')->name('auth');
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+// Admin routes
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+	
 	Route::get('/', function () {
 		return view('admin.index');
 	});
+	
 });

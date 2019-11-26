@@ -10,7 +10,7 @@
 
 	<link rel="icon" href="assets/images/favicon.ico">
 
-	<title>Neon | Login</title>
+	<title>21Corporate | Connexion</title>
 
 	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
 	<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
@@ -33,12 +33,13 @@
 
 
 </head>
-<body class="page-body login-page login-form-fall" data-url="http://neon.dev">
+<body class="page-body login-page login-form-fall" data-url="http://21corporate.fr">
 
 
 <!-- This is needed when you send requests via Ajax -->
 <script type="text/javascript">
-var baseurl = '';
+const baseurl = "{{ route('home') }}";
+const token = "{{ csrf_token() }}";
 </script>
 
 <div class="login-container">
@@ -47,16 +48,16 @@ var baseurl = '';
 		
 		<div class="login-content">
 			
-			<a href="index.html" class="logo">
-				<img src="assets/images/logo@2x.png" width="120" alt="" />
+			<a href="{{ route('home') }}" class="logo">
+				<h1 style="color: #fff; font-weight: bold">21Corporate</h1>
 			</a>
 			
-			<p class="description">Dear user, log in to access the admin area!</p>
+			<p class="description">Bienvenue, connectez vous pour administrer votre site!</p>
 			
 			<!-- progress bar indicator -->
 			<div class="login-progressbar-indicator">
 				<h3>43%</h3>
-				<span>logging in...</span>
+				<span>connexion...</span>
 			</div>
 		</div>
 		
@@ -69,14 +70,9 @@ var baseurl = '';
 	<div class="login-form">
 		
 		<div class="login-content">
-			
-			<div class="form-login-error">
-				<h3>Invalid login</h3>
-				<p>Enter <strong>demo</strong>/<strong>demo</strong> as login and password.</p>
-			</div>
-			
+
 			<form method="post" role="form" id="form_login">
-				
+
 				<div class="form-group">
 					
 					<div class="input-group">
@@ -84,7 +80,7 @@ var baseurl = '';
 							<i class="entypo-user"></i>
 						</div>
 						
-						<input type="text" class="form-control" name="username" id="username" placeholder="Username" autocomplete="off" />
+						<input type="email" class="form-control" name="email" id="email" placeholder="Adresse e-mail" autocomplete="off" />
 					</div>
 					
 				</div>
@@ -96,7 +92,7 @@ var baseurl = '';
 							<i class="entypo-key"></i>
 						</div>
 						
-						<input type="password" class="form-control" name="password" id="password" placeholder="Password" autocomplete="off" />
+						<input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" autocomplete="off" />
 					</div>
 				
 				</div>
@@ -104,55 +100,20 @@ var baseurl = '';
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary btn-block btn-login">
 						<i class="entypo-login"></i>
-						Login In
+						Connexion
 					</button>
 				</div>
-				
-				<!-- Implemented in v1.1.4 -->
-				<div class="form-group">
-					<em>- or -</em>
-				</div>
-				
-				<div class="form-group">
-				
-					<button type="button" class="btn btn-default btn-lg btn-block btn-icon icon-left facebook-button">
-						Login with Facebook
-						<i class="entypo-facebook"></i>
-					</button>
-					
-				</div>
-				
-				<!-- 
-				
-				You can also use other social network buttons
-				<div class="form-group">
-				
-					<button type="button" class="btn btn-default btn-lg btn-block btn-icon icon-left twitter-button">
-						Login with Twitter
-						<i class="entypo-twitter"></i>
-					</button>
-					
-				</div>
-				
-				<div class="form-group">
-				
-					<button type="button" class="btn btn-default btn-lg btn-block btn-icon icon-left google-button">
-						Login with Google+
-						<i class="entypo-gplus"></i>
-					</button>
-					
-				</div> -->
 				
 			</form>
 			
 			
 			<div class="login-bottom-links">
 				
-				<a href="extra-forgot-password.html" class="link">Forgot your password?</a>
+				<a href="extra-forgot-password.html" class="link">Mot de passe oublié?</a>
 				
 				<br />
 				
-				<a href="#">ToS</a>  - <a href="#">Privacy Policy</a>
+				<a href="#">Conditions d'utilisation</a>  - <a href="#">Police de confidentialité</a>
 				
 			</div>
 			
@@ -171,6 +132,7 @@ var baseurl = '';
 	<script src="assets/js/resizeable.js"></script>
 	<script src="assets/js/neon-api.js"></script>
 	<script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/toastr.js"></script>
 	<script src="assets/js/neon-login.js"></script>
 
 

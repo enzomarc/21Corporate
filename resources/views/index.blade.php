@@ -65,9 +65,9 @@
                                     <div class="uk-grid uk-dropdown-grid">
                                         <div class="uk-width-1-1">
                                             <ul class="uk-nav uk-nav-navbar">
-                                                <li><a href="players.html">Players</a>
+                                                <li><a href="players.html">Joueurs</a>
                                                 </li>
-                                                <li><a href="gallery.html">Gallery</a>
+                                                <li><a href="gallery.html">Gallerie</a>
                                                 </li>
                                             </ul>
                                         </div>
