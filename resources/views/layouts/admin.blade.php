@@ -7,23 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Neon Admin Panel" />
     <meta name="author" content="" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="icon" href="/assets/images/favicon.ico">
 
     <title>21Corporate | Administration</title>
 
-    <link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
-    <link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+    <link rel="stylesheet" href="/assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="/assets/css/font-icons/entypo/css/entypo.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/neon-core.css">
-    <link rel="stylesheet" href="assets/css/neon-theme.css">
-    <link rel="stylesheet" href="assets/css/neon-forms.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/neon-core.css">
+    <link rel="stylesheet" href="/assets/css/neon-theme.css">
+    <link rel="stylesheet" href="/assets/css/neon-forms.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
 
-    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    @yield('css')
 
-    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+
+    <!--[if lt IE 9]><script src="/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,7 +36,7 @@
 
 
 </head>
-<body class="page-body  page-left-in" data-url="http://neon.dev">
+<body class="page-body  page-left-in" data-url="https://enzomarc.github.io">
 
 <div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
 
@@ -45,7 +48,7 @@
 
                 <!-- logo -->
                 <div class="logo">
-                    <a href="{{ route('home') }}">
+                    <a href="{{ route('dashboard') }}">
                         <h2 style="color: #fff; font-weight: bold">21Corporate</h2>
                     </a>
                 </div>
@@ -69,8 +72,8 @@
             <div class="sidebar-user-info">
 
                 <div class="sui-normal">
-                    <a href="#" class="user-link">
-                        <img src="{{ auth()->user()->avatar != null ? "upload/" . auth()->user()->avatar : "assets/images/thumb-1@2x.png" }}" width="55" alt="" class="img-circle" />
+                    <a href="{{ route('dashboard') }}" class="user-link">
+                        <img src="{{ auth()->user()->avatar != null ? "/upload/" . auth()->user()->avatar : "/assets/images/thumb-1@2x.png" }}" width="55" alt="" class="img-circle" />
 
                         <span>Bienvenue,</span>
                         <strong>{{ auth()->user()->first_name . ' ' . auth()->user()->last_name }}</strong>
@@ -101,10 +104,10 @@
             <ul id="main-menu" class="main-menu">
                 <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                 <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
-                <li>
-                    <a href="#">
+                <li @if(isset($page) && $page == 'news') class="active" @endif>
+                    <a href="{{ route('news.index') }}">
                         <i class="entypo-newspaper"></i>
-                        <span class="title">Nouvelles</span>
+                        <span class="title">Actualités</span>
                     </a>
                 </li>
                 <li class="has-sub">
@@ -326,7 +329,7 @@
                                         <li class="active">
                                             <a href="#">
 											<span class="image pull-right">
-												<img src="assets/images/thumb-1@2x.png" width="44" alt="" class="img-circle" />
+												<img src="/assets/images/thumb-1@2x.png" width="44" alt="" class="img-circle" />
 											</span>
 
                                                 <span class="line">
@@ -343,7 +346,7 @@
                                         <li class="active">
                                             <a href="#">
 											<span class="image pull-right">
-												<img src="assets/images/thumb-2@2x.png" width="44" alt="" class="img-circle" />
+												<img src="/assets/images/thumb-2@2x.png" width="44" alt="" class="img-circle" />
 											</span>
 
                                                 <span class="line">
@@ -360,7 +363,7 @@
                                         <li>
                                             <a href="#">
 											<span class="image pull-right">
-												<img src="assets/images/thumb-3@2x.png" width="44" alt="" class="img-circle" />
+												<img src="/assets/images/thumb-3@2x.png" width="44" alt="" class="img-circle" />
 											</span>
 
                                                 <span class="line">
@@ -377,7 +380,7 @@
                                         <li>
                                             <a href="#">
 											<span class="image pull-right">
-												<img src="assets/images/thumb-4@2x.png" width="44" alt="" class="img-circle" />
+												<img src="/assets/images/thumb-4@2x.png" width="44" alt="" class="img-circle" />
 											</span>
 
                                                 <span class="line">
@@ -524,37 +527,37 @@
 
                         Language: &nbsp;
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
-                            <img src="assets/images/flags/flag-uk.png" width="16" height="16" />
+                            <img src="/assets/images/flags/flag-uk.png" width="16" height="16" />
                         </a>
 
                         <ul class="dropdown-menu pull-right">
                             <li>
                                 <a href="#">
-                                    <img src="assets/images/flags/flag-de.png" width="16" height="16" />
+                                    <img src="/assets/images/flags/flag-de.png" width="16" height="16" />
                                     <span>Deutsch</span>
                                 </a>
                             </li>
                             <li class="active">
                                 <a href="#">
-                                    <img src="assets/images/flags/flag-uk.png" width="16" height="16" />
+                                    <img src="/assets/images/flags/flag-uk.png" width="16" height="16" />
                                     <span>English</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="assets/images/flags/flag-fr.png" width="16" height="16" />
+                                    <img src="/assets/images/flags/flag-fr.png" width="16" height="16" />
                                     <span>François</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="assets/images/flags/flag-al.png" width="16" height="16" />
+                                    <img src="/assets/images/flags/flag-al.png" width="16" height="16" />
                                     <span>Shqip</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="assets/images/flags/flag-es.png" width="16" height="16" />
+                                    <img src="/assets/images/flags/flag-es.png" width="16" height="16" />
                                     <span>Español</span>
                                 </a>
                             </li>
@@ -577,7 +580,7 @@
                     <li class="sep"></li>
 
                     <li>
-                        <a href="extra-login.html">
+                        <a href="{{ route('logout') }}">
                             Log Out <i class="entypo-logout right"></i>
                         </a>
                     </li>
@@ -786,34 +789,43 @@
 
 
 <!-- Imported styles on this page -->
-<link rel="stylesheet" href="assets/js/jvectormap/jquery-jvectormap-1.2.2.css">
-<link rel="stylesheet" href="assets/js/rickshaw/rickshaw.min.css">
+<link rel="stylesheet" href="/assets/js/jvectormap/jquery-jvectormap-1.2.2.css">
+<link rel="stylesheet" href="/assets/js/rickshaw/rickshaw.min.css">
 
 <!-- Bottom scripts (common) -->
-<script src="assets/js/gsap/TweenMax.min.js"></script>
-<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
-<script src="assets/js/bootstrap.js"></script>
-<script src="assets/js/joinable.js"></script>
-<script src="assets/js/resizeable.js"></script>
-<script src="assets/js/neon-api.js"></script>
-<script src="assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/assets/js/gsap/TweenMax.min.js"></script>
+<script src="/assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
+<script src="/assets/js/joinable.js"></script>
+<script src="/assets/js/resizeable.js"></script>
+<script src="/assets/js/neon-api.js"></script>
+<script src="/assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 
 
 <!-- Imported scripts on this page -->
-<script src="assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js"></script>
-<script src="assets/js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<script src="assets/js/jquery.sparkline.min.js"></script>
-<script src="assets/js/rickshaw/vendor/d3.v3.js"></script>
-<script src="assets/js/rickshaw/rickshaw.min.js"></script>
-<script src="assets/js/neon-chat.js"></script>
-
+<script src="/assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js"></script>
+<script src="/assets/js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="/assets/js/jquery.sparkline.min.js"></script>
+<script src="/assets/js/rickshaw/vendor/d3.v3.js"></script>
+<script src="/assets/js/rickshaw/rickshaw.min.js"></script>
+<script src="/assets/js/neon-chat.js"></script>
 
 <!-- JavaScripts initializations and stuff -->
-<script src="assets/js/neon-custom.js"></script>
-
+<script src="/assets/js/neon-custom.js"></script>
 
 <!-- Demo Settings -->
-<script src="assets/js/neon-demo.js"></script>
+<script src="/assets/js/neon-demo.js"></script>
+<script src="/assets/js/toastr.js"></script>
+
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    })
+</script>
+
+@yield('script')
 
 </body>
 </html>

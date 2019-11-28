@@ -28,6 +28,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 	
 	Route::get('/', function () {
 		return view('admin.index');
-	});
+	})->name('dashboard');
+	
+	Route::resource('news', 'PostController')->except('update');
+	Route::post('news/{news}/update', 'PostController@update')->name('news.update');
 	
 });
