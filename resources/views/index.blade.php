@@ -58,7 +58,7 @@
                         </a>
 
                         <ul class="uk-navbar-nav uk-hidden-small">
-                            <li class="uk-parent uk-active" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="index.html">Accueil</a></li>
+                            <li class="uk-parent uk-active" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="{{ route('home') }}">Accueil</a></li>
                             <li data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="about.html">A Propos</a></li>
                             <li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#">Pages</a>
                                 <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1">
@@ -86,7 +86,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="news.html">News</a>
+                            <li><a href="{{ route('news.all') }}">Actualités</a>
                             </li>
                             <li><a href="category.html">Boutique</a>
                             </li>

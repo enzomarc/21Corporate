@@ -5,6 +5,8 @@
 	use App\Post;
 	use App\User;
 	use Illuminate\Http\Request;
+	use Illuminate\Support\Collection;
+	use Illuminate\Support\Facades\DB;
 	use Illuminate\Support\Str;
 	
 	class PostController extends Controller
@@ -164,5 +166,76 @@
 			} catch (\Exception $e) {
 				return response()->json(['message' => "Une erreur est survenue lors de la suppression de la nouvelle.", 'exception' => $e->getMessage()], 500);
 			}
+		}
+		
+		/**
+		 * Show all news.
+		 *
+		 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+		 */
+		public function all()
+		{
+			$posts = Post::all()->sortBy('created_at', SORT_DESC, true);
+			$posts->transform(function (Post $post) {
+				$author = User::find($post->author);
+				$tags = json_decode($post->tags);
+				$post->author = $author != null ? $author->first_name : $post->author;
+				$post->tags = implode(', ', $tags);
+				$post->description = "lorem ipsum dolor sit amet consectetur adipisicing elit.";
+				
+				return $post;
+			});
+			
+			return view('news.index', compact('posts'));
+		}
+		
+		/**
+		 * Show single news.
+		 *
+		 * @param string $slug
+		 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+		 */
+		public function single(string $slug)
+		{
+			$post = Post::all()->where('slug', $slug)->first();
+			
+			if ($post != null) {
+				$author = User::find($post->author);
+				$tags = json_decode($post->tags);
+				$post->author = $author != null ? $author->first_name : $post->author;
+				$post->description = "lorem ipsum dolor sit amet consectetur adipisicing elit.";
+				$post->tag = new Collection();
+				foreach ($tags as $tag) {
+					if (!$post->tag->contains($tag))
+						$post->tag->add($tag);
+				}
+				
+				return view('news.single', compact('post'));
+			} else {
+				return response()->json("Impossible d'afficher cet article.", 404);
+			}
+		}
+		
+		/**
+		 * Get all news tags.
+		 *
+		 * @return \Illuminate\Http\JsonResponse
+		 */
+		public function tags()
+		{
+			$temp = DB::table('posts')->distinct()->get('tags');
+			$temp->transform(function ($tag) {
+				return json_decode(json_decode($tag->tags));
+			});
+			$tags = new Collection();
+			
+			foreach ($temp as $item) {
+				foreach ($item as $tag) {
+					if (!$tags->contains($tag))
+						$tags->add($tag);
+				}
+			}
+			
+			return response()->json(['tags' => $tags]);
 		}
 	}

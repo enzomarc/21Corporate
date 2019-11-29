@@ -10,13 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-use Illuminate\Support\Facades\Route;
+	
+	use App\Post;
+	use Illuminate\Support\Facades\DB;
+	use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
     return view('index');
 })->name('home');
+
+Route::get('news', 'PostController@all')->name('news.all');
+Route::get('news/{slug}', 'PostController@single')->name('news.single');
+Route::get('tags', 'PostController@tags')->name('news.tags');
 
 // Admin authentication routes
 Route::get('login', 'Auth\LoginController@login')->name('login');
