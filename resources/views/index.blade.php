@@ -114,9 +114,9 @@
                                             <div class="uk-position-cover uk-flex-middle">
                                                 <div class="uk-container uk-container-center uk-position-cover">
                                                     <div class="va-promo-text uk-width-6-10 uk-push-4-10">
-                                                        <h3>Life is <span>about timing</span></h3>
+                                                        <h3>Les meilleurs <span>joueurs</span></h3>
                                                         <div class="promo-sub">Just play. <span>Have fun.</span> Enjoy the game</div>
-                                                        <a href="#" class="read-more">Read More<i class="uk-icon-chevron-right"></i></a>
+                                                        <a href="#" class="read-more">En savoir plus<i class="uk-icon-chevron-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -126,9 +126,9 @@
                                             <div class="uk-position-cover uk-flex-middle">
                                                 <div class="uk-container uk-container-center uk-position-cover">
                                                     <div class="va-promo-text uk-width-6-10 uk-push-4-10">
-                                                        <h3>Just play.<span>Have fun.</span></h3>
+                                                        <h3>Les meilleurs <span>agents</span></h3>
                                                         <div class="promo-sub">Life is <span>about timing</span> Enjoy the game</div>
-                                                        <a href="#" class="read-more">Read More<i class="uk-icon-chevron-right"></i></a>
+                                                        <a href="#" class="read-more">En savoir plus<i class="uk-icon-chevron-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -138,9 +138,9 @@
                                             <div class="uk-position-cover uk-flex-middle">
                                                 <div class="uk-container uk-container-center uk-position-cover">
                                                     <div class="va-promo-text uk-width-6-10 uk-push-4-10">
-                                                        <h3>Life is <span>about timing</span></h3>
+                                                        <h3>Une meilleure <span>équipe</span></h3>
                                                         <div class="promo-sub">Just play. <span>Have fun.</span> Enjoy the game</div>
-                                                        <a href="#" class="read-more">Read More<i class="uk-icon-chevron-right"></i></a>
+                                                        <a href="#" class="read-more">En savoir plus<i class="uk-icon-chevron-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -175,7 +175,7 @@
                             <div class="va-latest-wrap">
                                 <div class="uk-container uk-container-center">
                                     <div class="va-latest-top">
-                                        <h3>Latest <span>Results</span></h3>
+                                        <h3>Derniers <span>Résultats</span></h3>
                                         <div class="tournament">
                                             <address>Cambridgeshire UK<br><br></address> </div>
                                         <div class="date">
@@ -225,7 +225,7 @@
                                         <div class="uk-grid">
                                             <div class="uk-width-1-1">
                                                 <div class="btn-wrap uk-container-center">
-                                                    <a class="read-more" href="results.html">More Info</a>
+                                                    <a class="read-more" href="results.html">Plus d'informations</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -249,11 +249,11 @@
                         <div class="uk-panel">
                             <div class="va-about-wrap clearfix uk-cover-background uk-position-relative">
                                 <div class="va-about-text">
-                                    <div class="title">About <span>Team</span>
+                                    <div class="title">A Propos <span>de l'équipe</span>
                                     </div>
                                     <p>Nam quis purus sed est interdum sagittis sed in leo. Nunc feugiat enim nunc, sit amet placerat erat consectetur in. Cras consequat enim nunc, sit amet venenatis massa volutpat ut. Cras vitae facilisis nulla. </p>
                                     <p>Nulla pharetra lobortis nisl, vitae pretium nunc congue eget. Nunc imperdiet consequat nibh pharetra venenatis. Duis vitae lacinia nibh, et egestas leo. Proin sed mi sit amet dolor rhoncus tristique. Maecenas rhoncus felis vel congue commodo.</p>
-                                    <a class="read-more" href="about.html">read more</a>
+                                    <a class="read-more" href="about.html">Lire plus</a>
                                 </div>
                             </div>
                         </div>
@@ -269,7 +269,7 @@
                                                 <a href="/" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideset-item="previous"></a>
                                                 <a href="/" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideset-item="next"></a>
                                             </div>
-                                            <h3>Trainers</h3>
+                                            <h3>Entraîneurs</h3>
                                         </div>
                                         <ul class="uk-grid uk-slideset uk-grid-width-1-1">
                                             <li class="uk-active" style="">
@@ -309,7 +309,7 @@
                         <div class="uk-panel">
                             <div class="donate-wrap">
                                 <div class="donate-inner">
-                                    <h3><span>Support</span> Team</h3>
+                                    <h3><span>Supportez</span> l'équipe</h3>
                                     <div class="uk-grid">
                                         <div class="uk-width-8-10 uk-push-1-10 intro-text">
                                             Donec ultrices pharetra bibendum. Aliquam velit tortor, maximus gravida nunc vitae, tincidunt dignissim erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi nec nisl a augue aliquam fringilla ac consectetur enim. Nullam sed pretium elit, eget fringilla nunc. </div>
@@ -335,10 +335,10 @@
                                                 <input name="amount" value="100" type="radio">
                                             </label>
                                         </div>
-                                        
+
                                         <br>
                                         <br>
-                                        <button class="donate-btn" type="submit" name="submit"><span>Donate</span>
+                                        <button class="donate-btn" type="submit" name="submit"><span>Faire un don</span>
                                         </button>
 
                                     </form>
@@ -361,12 +361,12 @@
                                 <div class="uk-grid uk-grid-collapse">
                                     <div class="uk-width-medium-1-2 uk-width-small-1-1 va-single-next-match">
                                         <div class="va-main-next-wrap">
-                                            <div class="main-next-match-title"><em>Next <span>Match</span></em>
+                                            <div class="main-next-match-title"><em>Prochain <span>Match</span></em>
                                             </div>
                                             <div class="match-list-single">
                                                 <div class="match-list-item">
                                                     <div class="count">
-                                
+
                                                         <div id="countdown4">
                                                             <div class="counter_container">
                                                             </div>
@@ -569,7 +569,7 @@
                                 <div class="uk-grid uk-grid-collapse" data-uk-grid-match="">
                                     <div class="uk-width-1-1">
                                         <div class="our-news-title">
-                                            <h3>Our <span>News</span></h3>
+                                            <h3>Notre <span>Actualité</span></h3>
                                         </div>
                                         <div class="our-news-text">Nullam quis eros tellus. Duis sit amet neque nec orci feugiat tincidunt. Lorem ipsum dolor sit amet,
                                             <br> consectetur adipiscing elit. Nulla sed turpis aliquet, pharetra enim sit amet, congue erat. </div>
@@ -588,7 +588,7 @@
                                                 Nov 20, 2015 </div>
                                             <div class="name">
                                                 <h4>
-                                                    <a href="news-single.html">Nullam enim ante, volutpat non viverra eget </a>	
+                                                    <a href="news-single.html">Nullam enim ante, volutpat non viverra eget </a>
                                                 </h4>
                                             </div>
                                             <div class="text">
@@ -614,7 +614,7 @@
                                                 Nov 20, 2015 </div>
                                             <div class="name">
                                                 <h4>
-                                                    <a href="news-single.html">Cum sociis natoque penatibus et magnis dis parturient</a>		
+                                                    <a href="news-single.html">Cum sociis natoque penatibus et magnis dis parturient</a>
                                                 </h4>
                                             </div>
                                             <div class="text">
@@ -628,7 +628,7 @@
 
                                 </div>
                             </div>
-                            <div class="all-news-btn"><a href="news.html"><span>All News</span></a>
+                            <div class="all-news-btn"><a href="news.html"><span>Toute l'actualité</span></a>
                             </div>
 
                         </div>
@@ -646,7 +646,7 @@
                             <div class="gallery-title">
                                 <div class="uk-container uk-container-center tt-gallery-top-main">
                                     <div class="uk-grid" data-uk-grid-match="">
-                                        <div class="uk-width-3-10 title">Gallery</div>
+                                        <div class="uk-width-3-10 title">Gallerie</div>
                                         <div class="uk-width-7-10 text">Nullam quis eros tellus. Duis sit amet neque nec orci feugiat tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed turpis aliquet, pharetra enim sit amet, congue erat. </div>
                                     </div>
                                 </div>
@@ -654,11 +654,10 @@
                             <div class="uk-sticky-placeholder">
                                 <div style="margin: 0px;" class="button-group filter-button-group" data-uk-sticky="{top:70, boundary: true}">
                                     <div class="uk-container uk-container-center">
-                                        <button class="active" data-filter="*">all</button>
-                                        <button data-filter=".tt_c26e2589e25045ad516b5bc37d18523a">Volleyball</button>
-                                        <button data-filter=".tt_6081becaf04f5a1455407d73e09bca13">Hockey</button>
+                                        <button class="active" data-filter="*">Tout</button>
+                                        <button data-filter=".tt_c26e2589e25045ad516b5bc37d18523a">Football</button>
+                                        <button data-filter=".tt_6081becaf04f5a1455407d73e09bca13">UFC</button>
                                         <button data-filter=".tt_c71a18083d9e74b4a5c5d8d9a17d68d0">Basketball</button>
-                                        <button data-filter=".tt_449a5f6d01d5f416810d04b4df596b6a">Football</button>
                                         <button data-filter=".tt_ea9d8d12fefde9e2f9c4631a76504ce7">Rugby</button>
                                     </div>
                                 </div>
@@ -820,7 +819,7 @@
                                     <div class="our-awards-main-wrap">
                                         <div class="uk-slidenav-position our-awards" data-uk-slider="{autoplay:true, autoplayInterval:7000}">
                                             <div class="our-awards-main-title">
-                                                <h2>Our <span>Awards</span></h2>
+                                                <h2>Nos <span>Récompenses</span></h2>
                                                 <div class="our-awards-btn">
                                                     <a draggable="false" href="/" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slider-item="previous"></a>
                                                     <a draggable="false" href="/" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slider-item="next"></a>
@@ -896,7 +895,7 @@
                                 <div class="uk-width-large-5-10 uk-width-medium-1-1 achievments-block uk-push-1-10">
                                     <div class="achievments-inner">
                                         <div class="our-awards-main-title">
-                                            <h2>achievements</h2>
+                                            <h2>Réalisations</h2>
                                         </div>
                                         <div class="uk-grid">
                                             <div class="uk-width-large-2-4 uk-width-medium-1-2 uk-width-small-1-2">
@@ -905,7 +904,7 @@
                                                     </div>
                                                     <div class="info">
                                                         <div class="number">35</div>
-                                                        <div class="text">goals</div>
+                                                        <div class="text">buts</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -915,7 +914,7 @@
                                                     </div>
                                                     <div class="info">
                                                         <div class="number">12</div>
-                                                        <div class="text">games played</div>
+                                                        <div class="text">matchs joués</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -925,7 +924,7 @@
                                                     </div>
                                                     <div class="info">
                                                         <div class="number">13</div>
-                                                        <div class="text">violations</div>
+                                                        <div class="text">cartons</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -935,7 +934,7 @@
                                                     </div>
                                                     <div class="info">
                                                         <div class="number">8</div>
-                                                        <div class="text">Awards</div>
+                                                        <div class="text">trophées</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -960,7 +959,7 @@
                                         <div class="uk-width-medium-8-10 uk-width-small-1-1 uk-push-1-10">
                                             <div class="our-team-wrap">
                                                 <div class="our-team-title">
-                                                    <h3>Our <span>Team</span></h3>
+                                                    <h3>Nos <span>Joueurs</span></h3>
                                                 </div>
                                                 <div class="our-team-text">
                                                     <p>Nullam quis eros tellus. Duis sit amet neque nec orci feugiat tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed turpis aliquet, pharetra enim sit amet, congue erat.</p>
@@ -1339,7 +1338,7 @@
                                     </div>
                                 </div>
 
-                                <div class="our-team-btn"><a href="players.html"><span>More Info</span></a>
+                                <div class="our-team-btn"><a href="players.html"><span>Voir Plus</span></a>
                                 </div>
                             </div>
 
@@ -1360,7 +1359,7 @@
                                     <div class="uk-grid">
                                         <div class="uk-width-1-1">
                                             <div class="shop-title">
-                                                <h2>Fun <span>Shop</span></h2>
+                                                <h2>Notre <span>Boutique</span></h2>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-8-10 uk-width-small-1-1 uk-push-1-10">
@@ -1401,7 +1400,7 @@
                                                         </div>
 
                                                         <div class="buttons">
-                                                            <a draggable="false" class="button_buy" href="#">Buy</a> 
+                                                            <a draggable="false" class="button_buy" href="#">Buy</a>
                                                         </div>
 
                                                     </div>
@@ -1430,7 +1429,7 @@
                                                         </div>
 
                                                         <div class="buttons">
-                                                            <a draggable="false" class="button_buy" href="#">Buy</a> 
+                                                            <a draggable="false" class="button_buy" href="#">Buy</a>
                                                         </div>
 
                                                     </div>
@@ -1459,7 +1458,7 @@
                                                         </div>
 
                                                         <div class="buttons">
-                                                            <a draggable="false" class="button_buy" href="#">Buy</a> 
+                                                            <a draggable="false" class="button_buy" href="#">Buy</a>
                                                         </div>
 
                                                     </div>
@@ -1963,7 +1962,7 @@
                                     </div>
                                 </div>
                                 <div class="fun-shop-btn">
-                                    <a href="category.html"><span>View all</span></a>
+                                    <a href="category.html"><span>Tout voir</span></a>
                                 </div>
                             </div>
                         </div>
@@ -1982,7 +1981,7 @@
                                     <div class="uk-grid">
                                         <div class="uk-width-medium-1-1">
                                             <div class="last-video-title">
-                                                <h2>Last <span>Video</span></h2>
+                                                <h2>Dernière <span>Vidéo</span></h2>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-8-10 uk-width-small-1-1 uk-push-1-10">
@@ -2030,7 +2029,7 @@
                                                     </ul>
                                                 </div>
                                                 <ul class="uk-slideset-nav uk-dotnav uk-flex-center">
-                                                   
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -2058,7 +2057,7 @@
                                                 <div class="contact-info-lines uk-vertical-align-middle">
                                                     <div class="item phone"><span class="icon"><i class="uk-icon-phone"></i></span>(846)-356-9322</div>
                                                     <div class="item mail"><span class="icon"><i class="uk-icon-envelope"></i></span><a href="mailto:support@torbara.com">support@torbara.com</a>
-                                                        
+
                                                     </div>
                                                     <div class="item location"><span class="icon"><i class="uk-icon-map-marker"></i></span>9478 Chestnut Street, Woodstock, GA 30188</div>
                                                 </div>
@@ -2067,7 +2066,7 @@
                                                 <div class="contact-form uk-height-1-1">
                                                     <div class="uk-position-cover uk-flex uk-flex-column uk-flex-center">
                                                         <div class="contact-form-title">
-                                                            <h2>Get in touch</h2>
+                                                            <h2>Contactez Nous</h2>
                                                         </div>
                                                         <div id="aiContactSafe_form_1">
                                                             <div class="aiContactSafe" id="aiContactSafe_mainbody_1">
@@ -2078,19 +2077,19 @@
                                                                                 <div class="aiContactSafe" id="aiContactSafe_contact_form">
                                                                                     <div class="aiContactSafe" id="aiContactSafe_info"></div>
                                                                                     <div class="aiContactSafe_row" id="aiContactSafe_row_aics_name">
-                                                                                        <div class="aiContactSafe_contact_form_field_label_left"><span class="aiContactSafe_label" id="aiContactSafe_label_aics_name"><label for="aics_name">Name</label></span>&nbsp;
+                                                                                        <div class="aiContactSafe_contact_form_field_label_left"><span class="aiContactSafe_label" id="aiContactSafe_label_aics_name"><label for="aics_name">Votre nom</label></span>&nbsp;
                                                                                             <label class="required_field">*</label>
                                                                                         </div>
                                                                                         <div class="aiContactSafe_contact_form_field_right">
-                                                                                            <input name="aics_name" id="aics_name" class="textbox" placeholder="Name" value="" type="text">
+                                                                                            <input name="aics_name" id="aics_name" class="textbox" placeholder="Votre nom" value="" type="text">
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="aiContactSafe_row" id="aiContactSafe_row_aics_email">
-                                                                                        <div class="aiContactSafe_contact_form_field_label_left"><span class="aiContactSafe_label" id="aiContactSafe_label_aics_email"><label for="aics_email">E-mail</label></span>&nbsp;
+                                                                                        <div class="aiContactSafe_contact_form_field_label_left"><span class="aiContactSafe_label" id="aiContactSafe_label_aics_email"><label for="aics_email">Votre e-mail</label></span>&nbsp;
                                                                                             <label class="required_field">*</label>
                                                                                         </div>
                                                                                         <div class="aiContactSafe_contact_form_field_right">
-                                                                                            <input name="aics_email" id="aics_email" class="email" placeholder="Email" value="" type="text">
+                                                                                            <input name="aics_email" id="aics_email" class="email" placeholder="Votre e-mail" value="" type="text">
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="aiContactSafe_row" id="aiContactSafe_row_aics_message">
@@ -2098,7 +2097,7 @@
                                                                                             <label class="required_field">*</label>
                                                                                         </div>
                                                                                         <div class="aiContactSafe_contact_form_field_right">
-                                                                                            <textarea name="aics_message" id="aics_message" cols="40" rows="10" class="editbox" placeholder="Message"></textarea>
+                                                                                            <textarea name="aics_message" id="aics_message" cols="40" rows="10" class="editbox" placeholder="Ecrivez votre message"></textarea>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -2114,7 +2113,7 @@
                                                                                                     <div id="aiContactSafeSend_loading_1">&nbsp;</div>
                                                                                                 </td>
                                                                                                 <td id="td_aiContactSafeSendButton">
-                                                                                                    <input id="aiContactSafeSendButton" value="Send" type="submit">
+                                                                                                    <input id="aiContactSafeSendButton" value="Envoyer" type="submit">
                                                                                                 </td>
                                                                                             </tr>
                                                                                         </tbody>
@@ -2131,18 +2130,18 @@
                                                 </div>
                                             </div>
 
-                                            
+
                                         </div>
                                     </div>
                                 </div>
                                 <script>
                                     window.map = false;
-                                                            
-                                    
-                                                            
+
+
+
                                     function initialize(){
                                         var myLatlng = new google.maps.LatLng(50.3915097,-4.1306689);
-                                    
+
                                         var mapOptions = {
                                             zoom:16,
                                             center: myLatlng,
@@ -2151,18 +2150,18 @@
 
                                             streetViewControl:false,
                                             overviewMapControl:false,
-                                            mapTypeControl:false    
-                                            
+                                            mapTypeControl:false
+
                                         };
-                                        
-                                        window.map = new google.maps.Map(document.getElementById('map'), mapOptions);                                                                                                                                                                                                                                                                               
-                                        
+
+                                        window.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
                                     }
-                                
+
                                     google.maps.event.addDomListener(window, 'load', initialize);
-                                </script>            
+                                </script>
                             <div id="map"></div>
-                                                
+
                             </div>
                         </div>
                     </div>
@@ -2178,7 +2177,7 @@
                         <div class="uk-width-1-1">
                             <div class="uk-panel">
                                 <div class="footer-logo">
-                                    <a href="/"><img src="images/footer-logo-img.png" alt=""><span>Sport</span>.ak</a>
+                                    <a href="/"><img src="images/footer-logo-img.png" alt=""><span>21</span>Corporate</a>
                                 </div>
                                 <div class="footer-socials">
                                     <div class="social-top">
@@ -2211,7 +2210,7 @@
                                 <div class="match-list-wrap foot">
                                     <div id="carusel-7" class="uk-slidenav-position" data-uk-slideshow="{ height : 37, autoplay:true, animation:'scroll' }">
                                         <div class="last-match-top">
-                                            <div class="last-match-title">Last match</div>
+                                            <div class="last-match-title">Dernier match</div>
                                             <div class="footer-slider-btn">
                                                 <a href="/" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
                                                 <a href="/" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
@@ -2428,7 +2427,7 @@
                                                         <tr>
                                                             <td class="acyfield_email acy_requiredField">
                                                                 <span class="mail-wrap">
-								                                    <input id="user_email_formAcymailing54111" onfocus="if(this.value == 'Enter your email') this.value = '';" onblur="if(this.value=='') this.value='Enter your email';" class="inputbox" name="user[email]" style="width:80%" value="Enter your email" title="Enter your email" type="text">
+								                                    <input id="user_email_formAcymailing54111" onfocus="if(this.value == 'Votre e-mail') this.value = '';" onblur="if(this.value=='') this.value='Votre e-mail';" class="inputbox" name="user[email]" style="width:80%" value="Votre e-mail" title="Votre e-mail" type="text">
                                                             </span>
                                                             </td>
                                                         </tr>
@@ -2437,7 +2436,7 @@
                                                             <td class="acysubbuttons">
                                                                 <span class="submit-wrap">
                                                                     <span class="submit-wrapper">
-                                                                        <input class="button subbutton btn btn-primary" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing54111'); }catch(err){alert('The form could not be submitted '+err);return false;}" type="submit">
+                                                                        <input class="button subbutton btn btn-primary" value="S'inscrire" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing54111'); }catch(err){alert('The form could not be submitted '+err);return false;}" type="submit">
                                                                     </span>
                                                                 </span>
                                                             </td>
@@ -2464,19 +2463,19 @@
                                 <div class="footer-wrap">
                                     <div class="foot-menu-wrap">
                                         <ul class="nav menu">
-                                            <li class="item-165"><a href="about.html">About</a>
+                                            <li class="item-165"><a href="about.html">A Propos</a>
                                             </li>
-                                            <li class="item-166"><a href="players.html">Players</a>
+                                            <li class="item-166"><a href="players.html">Joueurs</a>
                                             </li>
                                             <li class="item-167"><a href="match-list.html">Match</a>
                                             </li>
-                                            <li class="item-168"><a href="results.html">Results</a>
+                                            <li class="item-168"><a href="results.html">Résultats</a>
                                             </li>
-                                            <li class="item-169"><a href="news.html">News</a>
+                                            <li class="item-169"><a href="news.html">Actualités</a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="copyrights">Copyright © 2015 <a href="/">Sportak Team</a>. All Rights Reserved.</div>
+                                    <div class="copyrights">Copyright © 2019 <a href="/">Marc Enzo</a>. All Rights Reserved.</div>
                                     <div class="clear"></div>
                                 </div>
                             </div>
@@ -2530,7 +2529,7 @@
         </div>
     </div>
 
-    
+
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/uikit.js"></script>
