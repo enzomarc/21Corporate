@@ -70,7 +70,7 @@
 						$data['image'] = $hero;
 				}
 				
-				if($data['tags'] != null) {
+				if ($data['tags'] != null) {
 					$tags = explode(',', $data['tags']);
 					$data['tags'] = json_encode($tags);
 				}
@@ -175,6 +175,7 @@
 		 */
 		public function all()
 		{
+			$page = 'news';
 			$posts = Post::all()->sortBy('created_at', SORT_DESC, true);
 			$posts->transform(function (Post $post) {
 				$author = User::find($post->author);
@@ -186,7 +187,7 @@
 				return $post;
 			});
 			
-			return view('news.index', compact('posts'));
+			return view('news.index', compact('posts', 'page'));
 		}
 		
 		/**
@@ -198,6 +199,7 @@
 		public function single(string $slug)
 		{
 			$post = Post::all()->where('slug', $slug)->first();
+			$page = 'news';
 			
 			if ($post != null) {
 				$author = User::find($post->author);
@@ -210,7 +212,7 @@
 						$post->tag->add($tag);
 				}
 				
-				return view('news.single', compact('post'));
+				return view('news.single', compact('post', 'page'));
 			} else {
 				return response()->json("Impossible d'afficher cet article.", 404);
 			}

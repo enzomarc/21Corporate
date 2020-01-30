@@ -18,7 +18,7 @@
  */
 html {
   /* 1 */
-  font: normal 14px / 20px 'Oswald';
+  font: normal 14px / 20px 'Oswald', sans-serif;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -258,7 +258,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 20px 0;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   color: #363533;
   text-transform: none;
@@ -2150,7 +2150,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   /* 2 */
   color: #363533;
   font-size: 14px;
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-weight: normal;
 }
 /* Appear not as link */
@@ -10027,7 +10027,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
 }
 .over-wrap {
   overflow-x: hidden;
@@ -10355,7 +10355,7 @@ q {
 .va-promo-text .promo-sub {
   padding-top: 15px;
   font-size: 21px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .va-promo-text .read-more {
   margin-top: 38px;
@@ -10363,7 +10363,7 @@ q {
   text-align: left;
   font-size: 12px;
   font-weight: bold;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   background: #ffc722;
   line-height: 38px;
   display: inline-block;
@@ -10460,7 +10460,7 @@ q {
 }
 .va-latest-top .tournament {
   padding-top: 20px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: 20px;
 }
 .va-latest-top .tournament address {
@@ -10468,7 +10468,7 @@ q {
 }
 .va-latest-top .date {
   padding-top: 4px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: 14px;
   color: #c4c4c4;
 }
@@ -10513,7 +10513,7 @@ q {
   text-transform: uppercase;
   font-weight: bold;
   color: #a6a6a6;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .va-latest-middle .table {
   position: relative;
@@ -10586,7 +10586,7 @@ q {
   position: relative;
   z-index: 0;
   text-align: center;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #a6a6a6;
   font-size: 15px;
   line-height: 22px;
@@ -10739,7 +10739,7 @@ q {
 .va-about-text p {
   font-size: 15px;
   line-height: 22px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .va-about-text .read-more {
   margin-top: 17px;
@@ -10747,7 +10747,7 @@ q {
   background: #363533;
   position: relative;
   display: inline-block;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   line-height: 38px;
   font-size: 12px;
   font-weight: bold;
@@ -10894,7 +10894,7 @@ q {
 .admin-edit li a {
   color: gray;
   font-size: 12px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .admin-edit li a:hover {
   text-decoration: none;
@@ -10947,7 +10947,7 @@ q {
   padding-right: 19px;
   width: 30%;
   font-size: 14px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   text-transform: none;
   box-sizing: border-box;
   color: #a6a6a6;
@@ -11004,7 +11004,7 @@ q {
   margin-left: 40px;
   font-size: 14px;
   color: #fff;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .match-list-wrap .match-list-item .location address {
   margin: 0;
@@ -11025,7 +11025,7 @@ q {
   font-weight: bold;
   font-size: 12px;
   line-height: 34px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   transition: 400ms all;
   -webkit-transition: 400ms all;
   text-transform: uppercase;
@@ -11143,14 +11143,14 @@ q {
   font-size: 14px;
   font-weight: 500;
   color: #a6a6a6;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .match-list-single .match-list-item .location {
   padding-top: 2px;
   font-size: 14px;
   font-weight: 500;
   color: #bababa;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 /********NEWS LIST********/
 .uk-breadcrumb {
@@ -11212,7 +11212,7 @@ q {
 .uk-breadcrumb > li > a {
   color: #ffffff;
   font-size: 14px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .uk-breadcrumb > li > a:hover {
   text-decoration: none;
@@ -11220,11 +11220,11 @@ q {
 }
 .uk-breadcrumb > li:not(.uk-active) > span {
   color: #fff;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: 14px;
 }
 .uk-breadcrumb > li.uk-active span {
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: 14px;
   color: #fff;
 }
@@ -11258,7 +11258,7 @@ q {
   color: #fff;
   font-weight: 500;
   font-size: 14px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .article-param > div a {
   font-size: 14px;
@@ -11332,7 +11332,7 @@ q {
   color: #a6a6a6;
   font-size: 15px;
   line-height: 22px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .article-single-text p {
   padding-left: 29px;
@@ -11556,7 +11556,7 @@ q {
   background: none;
   font-size: 14px;
   color: #363533;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   vertical-align: top;
   line-height: 18px;
 }
@@ -11601,7 +11601,7 @@ q {
 .footer-about-text {
   padding-bottom: 20px;
   font-size: 14px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #787878;
 }
 .footer-socials {
@@ -11631,7 +11631,7 @@ q {
   display: inline-block;
   font-size: 12px;
   color: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .match-list-item.foot .read-more:after {
   margin-left: 7px;
@@ -11720,7 +11720,7 @@ q {
 }
 .foot-menu-wrap ul li a {
   font-size: 14px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #bababa;
 }
 .foot-menu-wrap ul li a:hover {
@@ -11730,12 +11730,12 @@ q {
 .copyrights {
   float: right;
   font-size: 14px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #787878;
 }
 .copyrights a {
   font-size: 14px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #bababa;
 }
 .copyrights a:hover {
@@ -11761,7 +11761,7 @@ q {
   line-height: 18px;
   color: #a6a6a6;
   float: right;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .acymailing_form {
   overflow: hidden;
@@ -11794,7 +11794,7 @@ q {
   z-index: 1;
   font-size: 14px;
   color: #a6a6a6;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .acymailing_form tr td .mail-wrap:hover:before {
   border-color: #ffc722;
@@ -11829,7 +11829,7 @@ q {
   font-size: 12px;
   color: #363533;
   font-weight: bold;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
   outline: none;
   position: relative;
@@ -12019,7 +12019,7 @@ q {
   font-size: 14px;
   text-transform: uppercase;
   color: #fff;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .categories-sidebar .menu li.active a {
   background: none;
@@ -12177,7 +12177,7 @@ q {
 .news-sidebar h4 a {
   font-size: 14px;
   color: #fff;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   line-height: 16px;
   display: block;
@@ -12211,7 +12211,7 @@ q {
   padding-bottom: 6px;
   font-size: 14px;
   line-height: 14px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #787774;
 }
 .tags-sidebar {
@@ -12253,7 +12253,7 @@ q {
   overflow: hidden;
   position: relative;
   z-index: 2;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   font-weight: bold;
@@ -12327,7 +12327,7 @@ q {
   font-size: 14px;
   color: #a6a6a6;
   font-weight: 400;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .list-article .name h4 {
   margin-bottom: 16px;
@@ -12343,7 +12343,7 @@ q {
   font-size: 15px;
   line-height: 22px;
   color: #a6a6a6;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .other-post-title {
   padding: 50px 0 0;
@@ -12399,7 +12399,7 @@ q {
   z-index: 3;
   font-size: 14px;
   color: #fff;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   line-height: normal;
   vertical-align: middle;
 }
@@ -12427,7 +12427,7 @@ q {
   text-transform: uppercase;
   position: relative;
   z-index: 2;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .list-article .article-actions .read-more a:after {
   content: '\f105';
@@ -12475,7 +12475,7 @@ q {
   font-size: 14px;
   font-weight: 600;
   color: #fff;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .pagination ul > li > span:hover,
 .pagination ul > li > a:hover {
@@ -12530,7 +12530,7 @@ q {
   line-height: 38px;
   font-size: 14px;
   color: #949494;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 #comments-form input[type='text']:focus {
   border-color: #ffc722;
@@ -12557,7 +12557,7 @@ q {
   line-height: 22px;
   font-size: 14px;
   color: #949494;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 #comments-form textarea {
   padding: 9px 14px 50px 14px !important;
@@ -12575,7 +12575,7 @@ q {
   line-height: 22px;
   font-size: 14px;
   color: #949494;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 #comments-form input.selected,
 #comments-form textarea.selected {
@@ -12659,7 +12659,7 @@ q {
   font-size: 12px;
   color: #363533;
   font-weight: bold;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
   outline: none;
   position: relative;
@@ -12752,7 +12752,7 @@ q {
   font-size: 12px;
   color: #363533;
   font-weight: bold;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
   outline: none;
   position: relative;
@@ -12779,7 +12779,7 @@ q {
   margin-right: 0;
   background-color: #ffc722;
   color: #fff;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 #comments-inline-edit {
   border: none;
@@ -12806,7 +12806,7 @@ q {
   color: #a6a6a6;
   font-size: 14px;
   font-weight: 500;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 #comments .comment-author {
   padding: 15px 0 0;
@@ -12818,7 +12818,7 @@ q {
   font-size: 15px;
   line-height: 22px;
   color: #a6a6a6;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 #comments .comment-avatar {
   width: 130px;
@@ -12853,7 +12853,7 @@ q {
   font-weight: bold;
   text-transform: uppercase;
   color: #363533;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 #comments .comments-buttons a:hover {
   color: #ffc722 !important;
@@ -12927,7 +12927,7 @@ q {
   font-size: 15px;
   line-height: 22px;
   color: #a6a6a6;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .match-article .big-title {
   padding-bottom: 14px;
@@ -13073,7 +13073,7 @@ q {
   padding: 22px 0 0;
   font-size: 14px;
   color: #c4c4c4;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-weight: 500;
 }
 .our-news-article .name h4 {
@@ -13090,7 +13090,7 @@ q {
   font-size: 15px;
   line-height: 22px;
   color: #c4c4c4;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .our-news-article .read-more {
   padding: 3px 0 25px 0;
@@ -13099,7 +13099,7 @@ q {
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .our-news-article .read-more a:after {
   content: '\f105';
@@ -13117,7 +13117,7 @@ q {
   display: inline-block;
   line-height: 38px;
   font-size: 12px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-weight: bold;
   color: #363533;
   text-transform: uppercase;
@@ -13153,7 +13153,7 @@ q {
   padding-top: 17px;
   padding-bottom: 35px;
   text-align: center;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #a6a6a6;
   font-size: 15px;
 }
@@ -13268,7 +13268,7 @@ q {
   border: none;
   background: none;
   outline: none;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: 12px;
   font-weight: 600;
   color: #fff;
@@ -13313,7 +13313,7 @@ q {
 }
 .tt-gallery-top .text {
   border-left: 4px solid #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: 15px;
   line-height: 22px;
   color: #a6a6a6;
@@ -13341,7 +13341,7 @@ q {
 .tt-gallery-top-main .text {
   padding-top: 38px;
   padding-bottom: 38px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: 15px;
   line-height: 22px;
   color: #a6a6a6;
@@ -13490,7 +13490,7 @@ q {
 }
 .player-single .player-total-info p {
   font-size: 15px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #a6a6a6;
 }
 .player-single .player-total-info p strong {
@@ -13505,7 +13505,7 @@ q {
   padding-left: 32px;
   background: url("../images/player-total-ul-bg.png") 0 2px no-repeat;
   font-size: 15px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #a6a6a6;
 }
 .button-group .label-menu {
@@ -13863,7 +13863,7 @@ q {
 .our-team-wrap .our-team-text {
   padding-top: 17px;
   text-align: center;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #a6a6a6;
   font-size: 15px;
 }
@@ -13893,7 +13893,7 @@ q {
   background: #fff;
   font-size: 12px;
   font-weight: bold;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
 }
 .our-team-btn {
@@ -13908,7 +13908,7 @@ q {
   display: inline-block;
   line-height: 38px;
   font-size: 12px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-weight: bold;
   color: #363533;
   text-transform: uppercase;
@@ -13949,12 +13949,12 @@ q {
 }
 .about-team-page-top-wrap .left-part .sub-title {
   font-weight: 600;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #363533;
   font-size: 16px;
 }
 .about-team-page-top-wrap .left-part p {
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #a6a6a6;
   font-size: 15px;
 }
@@ -13966,7 +13966,7 @@ q {
   font-size: 370px;
   line-height: 260px;
   font-weight: bold;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .about-team-page-top-wrap .top-banner:after {
   content: '\201d';
@@ -13976,7 +13976,7 @@ q {
   font-size: 370px;
   line-height: 0;
   font-weight: bold;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .about-team-page-top-wrap .top-banner .inner {
   text-align: center;
@@ -14002,7 +14002,7 @@ q {
   padding-top: 30px;
   font-size: 18px;
   color: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   line-height: normal;
   text-transform: none;
   position: relative;
@@ -14041,7 +14041,7 @@ q {
   padding-top: 17px;
   padding-bottom: 35px;
   text-align: center;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #a6a6a6;
   font-size: 15px;
 }
@@ -14078,7 +14078,7 @@ q {
   padding: 15px 0 0;
   font-size: 15px;
   color: #a6a6a6;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .contact-socials {
   padding: 52px 0 2px 0;
@@ -14110,14 +14110,14 @@ q {
   padding-top: 10px;
   font-size: 14px;
   font-weight: 500;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #787774;
 }
 .contact-enquiries .mail {
   padding-top: 10px;
   font-size: 14px;
   font-weight: 500;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .contact-enquiries .mail a {
   color: #363533;
@@ -14129,7 +14129,7 @@ q {
   padding-top: 10px;
   font-size: 14px;
   font-weight: 500;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #787774;
 }
 .contact-enquiries [class*="uk-icon-"] {
@@ -14193,7 +14193,7 @@ q {
   border-width: 1px 1px 1px 0;
   line-height: 38px;
   font-size: 14px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .map-wrap .contact-form input[type='text'].email {
   width: 405px;
@@ -14215,7 +14215,7 @@ q {
   border-width: 1px 1px 1px 0;
   height: 143px;
   font-size: 14px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .map-wrap .contact-form textarea:hover {
   border-color: #ffc722;
@@ -14247,7 +14247,7 @@ q {
   height: 44px;
   background: #ffc722;
   position: relative;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -14321,7 +14321,7 @@ q {
 }
 .map-wrap .contact-form .aiContactSafe_error_msg ul li {
   color: #D85030;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .map-wrap .contact-form .error h2 {
   display: none;
@@ -14358,7 +14358,7 @@ q {
   clear: both;
   line-height: 30px;
   background: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #363533;
   font-weight: 500;
 }
@@ -14461,7 +14461,7 @@ q {
 .jshop_prod_description {
   padding: 20px 0 30px 0;
   color: #a6a6a6;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .jshop_prod_description p {
   margin: 20px 0 0;
@@ -14479,7 +14479,7 @@ q {
   height: 36px;
   font-size: 14px;
   color: #a6a6a6;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .prod_buttons .buttons {
   display: inline-block;
@@ -14492,7 +14492,7 @@ q {
   font-weight: bold;
   color: #363533;
   background: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   height: 36px;
   line-height: 36px;
   border: none;
@@ -14522,7 +14522,7 @@ q {
   font-weight: bold;
   color: #363533;
   background: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   height: 36px;
   line-height: 36px;
   border: none;
@@ -14576,7 +14576,7 @@ table.jshop .button {
   font-weight: bold;
   color: #363533;
   background: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   height: 36px;
   line-height: 36px;
   border: none;
@@ -14604,7 +14604,7 @@ table.jshop .button:hover {
   font-weight: bold;
   color: #363533;
   background: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   height: 36px;
   line-height: 36px;
   border: none;
@@ -14622,7 +14622,7 @@ table.jshop .button:hover {
   font-weight: bold;
   color: #363533;
   background: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   height: 36px;
   line-height: 36px;
   border: none;
@@ -14643,7 +14643,7 @@ table.jshop .button:hover {
   font-weight: bold;
   color: #363533;
   background: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   height: 36px;
   line-height: 36px;
   border: none;
@@ -14675,7 +14675,7 @@ table.jshop .button:hover {
   font-weight: bold;
   color: #363533;
   background: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   height: 36px;
   line-height: 36px;
   border: none;
@@ -14693,7 +14693,7 @@ table.jshop .button:hover {
   font-weight: bold;
   color: #363533;
   background: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   height: 36px;
   line-height: 36px;
   border: none;
@@ -14711,7 +14711,7 @@ table.jshop .button:hover {
   font-weight: bold;
   color: #363533;
   background: #ffc722;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   height: 36px;
   line-height: 36px;
   border: none;
@@ -14984,7 +14984,7 @@ table.jshop .button:hover {
 .last-video-text {
   padding: 0 0 35px 0;
   text-align: center;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #a6a6a6;
 }
 .last-video-wrap iframe {
@@ -15036,14 +15036,14 @@ table.jshop .button:hover {
 .shop-main-page-wrap .shop-text {
   padding: 0 0 35px 0;
   text-align: center;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #a6a6a6;
 }
 .shop-main-page-wrap .sale-proposal {
   padding: 0 15px;
   display: inline-block;
   font-size: 28px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   line-height: 45px;
   background: #363533;
   font-weight: 300;
@@ -15180,7 +15180,7 @@ table.jshop .button:hover {
   display: inline-block;
   line-height: 38px;
   font-size: 12px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-weight: bold;
   color: #363533;
   text-transform: uppercase;
@@ -15258,7 +15258,7 @@ ul.uk-switcher {
   -webkit-transition: 400ms all;
 }
 .uk-accordion-content {
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: 15px;
   color: #a6a6a6;
 }
@@ -15363,10 +15363,10 @@ ul.uk-switcher {
   color: #a6a6a6;
   font-size: 15px;
   line-height: 38px;
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
 }
 .tabs-switch-bottom {
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   color: #a6a6a6;
 }
 .tabs-switch-bottom > li {
