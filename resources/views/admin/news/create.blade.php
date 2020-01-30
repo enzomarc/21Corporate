@@ -39,7 +39,6 @@
                 <input type="text" class="form-control input-lg" name="title" id="title" placeholder="Titre de l'article" required />
             </div>
         </div>
-
         <br />
 
         <!-- WYSIWYG - Content Editor -->
@@ -217,7 +216,6 @@
     <script>
         $('button#publish').click(() => {
             const data = new FormData($('#createForm')[0]);
-            console.log(data);
 
             $.ajax({
                 url: "{{ route('news.store') }}",
@@ -227,7 +225,6 @@
                 contentType: false,
                 processData: false,
                 success: (response) => {
-                    console.log(response);
                     toastr.success(response.message, "Succès");
                 },
                 error: (response) => {

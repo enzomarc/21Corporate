@@ -104,13 +104,19 @@
             <ul id="main-menu" class="main-menu">
                 <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                 <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
-                <li @if(isset($page) && $page == 'news') class="active" @endif>
+                <li data-page="about">
+                    <a href="{{ route('about.admin') }}">
+                        <i class="entypo-info-circled"></i>
+                        <span class="title">A Propos</span>
+                    </a>
+                </li>
+                <li data-page="news">
                     <a href="{{ route('news.index') }}">
                         <i class="entypo-newspaper"></i>
                         <span class="title">Actualités</span>
                     </a>
                 </li>
-                <li class="has-sub">
+                <li data-page="unknown" class="has-sub">
                     <a href="#">
                         <i class="entypo-flow-tree"></i>
                         <span class="title">Menu Levels</span>
@@ -816,13 +822,22 @@
 <!-- Demo Settings -->
 <script src="/assets/js/neon-demo.js"></script>
 <script src="/assets/js/toastr.js"></script>
+<script type="text/javascript" src="/js/underscore.js"></script>
 
 <script>
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
-    })
+    });
+
+    const items = $('ul.main-menu li');
+    const page = "{{ $page ?? '' }}".toLowerCase();
+
+    _.each(items, (item) => {
+        if (item.dataset['page'].toLowerCase() === page)
+            item.classList.add('active');
+    });
 </script>
 
 @yield('script')
