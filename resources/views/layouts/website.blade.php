@@ -58,29 +58,8 @@
                     <ul class="uk-navbar-nav uk-hidden-small">
                         <li class="uk-parent uk-active" data-page="home" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="{{ route('home') }}">Accueil</a></li>
                         <li data-page="about" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="{{ route('about') }}">A Propos</a></li>
-                        <li class="uk-parent" data-page="pages" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#">Pages</a>
-                            <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1">
-                                <div class="uk-grid uk-dropdown-grid">
-                                    <div class="uk-width-1-1">
-                                        <ul class="uk-nav uk-nav-navbar">
-                                            <li data-page="players"><a href="players.html">Joueurs</a></li>
-                                            <li data-page="gallery"><a href="gallery.html">Gallerie</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="uk-parent" data-page="match" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="match-list.html">Match</a>
-                            <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1">
-                                <div class="uk-grid uk-dropdown-grid">
-                                    <div class="uk-width-1-1">
-                                        <ul class="uk-nav uk-nav-navbar">
-                                            <li data-page="results"><a href="results.html">Resultats</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        <li data-page="players"><a href="{{ route('players') }}">Joueurs</a></li>
+                        <li data-page="match"><a href="{{ route('players') }}">Matchs</a></li>
                         <li data-page="news"><a href="{{ route('news.all') }}">Actualités</a></li>
                         <li data-page="shop"><a href="/category.html">Boutique</a></li>
                         <li data-page="contact"><a href="/contact.html">Contact</a></li>
@@ -378,10 +357,10 @@
                             <div class="footer-wrap">
                                 <div class="foot-menu-wrap">
                                     <ul class="nav menu">
-                                        <li class="item-165"><a href="{{ route('about') }}">About</a></li>
-                                        <li class="item-166"><a href="players.html">Players</a></li>
+                                        <li class="item-165"><a href="{{ route('about') }}">A Propos</a></li>
+                                        <li class="item-166"><a href="{{ route('players') }}">Nos Joueurs</a></li>
                                         <li class="item-167"><a href="match-list.html">Match</a></li>
-                                        <li class="item-168"><a href="results.html">Results</a></li>
+                                        <li class="item-168"><a href="results.html">Résultats</a></li>
                                         <li class="item-169"><a href="{{ route('news.all') }}">Actualités</a></li>
                                     </ul>
                                 </div>

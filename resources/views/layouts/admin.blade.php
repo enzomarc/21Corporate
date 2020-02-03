@@ -116,6 +116,12 @@
                         <span class="title">Actualités</span>
                     </a>
                 </li>
+                <li data-page="players">
+                    <a href="{{ route('players.index') }}">
+                        <i class="entypo-users"></i>
+                        <span class="title">Joueurs</span>
+                    </a>
+                </li>
                 <li data-page="unknown" class="has-sub">
                     <a href="#">
                         <i class="entypo-flow-tree"></i>

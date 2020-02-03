@@ -27,6 +27,7 @@ Route::get('about', function () {
 Route::get('news', 'PostController@all')->name('news.all');
 Route::get('news/{slug}', 'PostController@single')->name('news.single');
 Route::get('tags', 'PostController@tags')->name('news.tags');
+Route::get('players', 'PlayerController@all')->name('players');
 
 
 // Admin authentication routes
@@ -41,10 +42,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 		return view('admin.index');
 	})->name('dashboard');
 	
+	// News
 	Route::resource('news', 'PostController')->except('update');
 	Route::post('news/{news}/update', 'PostController@update')->name('news.update');
 	
+	// About
 	Route::get('about', 'AboutController@index')->name('about.admin');
 	Route::post('about', 'AboutController@store')->name('about.store');
+	
+	// Players
+	Route::resource('players', 'PlayerController');
 	
 });
