@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Achievement;
 use App\Career;
+use App\Photo;
 use App\Player;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PlayerController extends Controller
 {
@@ -17,7 +20,34 @@ class PlayerController extends Controller
 	public function all()
 	{
 		$page = 'players';
-		return view('players', compact('page'));
+		$players = Player::with(['achievements', 'careers', 'photos'])->get();
+		$temp = DB::table('players')->distinct()->get('preferred_position');
+		$positions = [];
+		
+		foreach($temp as $position) {
+			$positions[] = $position->preferred_position;
+		}
+		
+		return view('players.players', compact('page', 'players', 'positions'));
+	}
+	
+	/**
+	 * Show website player page.
+	 *
+	 * @param int $player
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+	 */
+	public function single(int $player)
+	{
+		try {
+			$page = 'players';
+			$player = Player::with(['achievements', 'careers', 'photos'])->findOrFail($player);
+			$photos = $player->photos;
+			
+			return view('players.player', compact('page', 'player', 'photos'));
+		} catch (\Exception $e) {
+			return redirect()->back()->withErrors("Impossible d'afficher les informations du joueur sélectionné.");
+		}
 	}
 	
 	/**
@@ -124,6 +154,18 @@ class PlayerController extends Controller
 				}
 			}
 			
+			// Store player photos
+			if (isset($data['photos'])) {
+				$photos = $data['photos'];
+				
+				foreach ($photos as $photo) {
+					$photo = Photo::find($photo['id']);
+					
+					if ($photo != null)
+						$photo->update(['player' => $player->id]);
+				}
+			}
+			
 			return response()->json(['message' => "Le joueur a été ajouté avec succès.", 'player' => $player], 201);
 		} catch (\Exception $e) {
 			return response()->json(['message' => "Une erreur est survenue lors de l'ajout du joueur.", 'exception' => $e->getMessage()], 500);
@@ -152,9 +194,6 @@ class PlayerController extends Controller
 			
 			foreach ($player->careers as $career)
 				$career->delete();
-			
-			foreach ($player->photos as $photo)
-				$photo->delete();
 			
 			// Store player careers items
 			if (isset($data['careers'])) {
@@ -187,6 +226,18 @@ class PlayerController extends Controller
 				}
 			}
 			
+			// Store player photos
+			if (isset($data['photos'])) {
+				$photos = $data['photos'];
+				
+				foreach ($photos as $photo) {
+					$photo = Photo::find($photo['id']);
+					
+					if ($photo != null)
+						$photo->update(['player' => $player->id]);
+				}
+			}
+			
 			return response()->json(['message' => "Le joueur a été mis à jour avec succès.", 'player' => $player]);
 		} catch (\Exception $e) {
 			return response()->json(['message' => "Une erreur est survenue lors de la mise à jour du joueur.", 'exception' => $e->getMessage()], 500);
@@ -211,8 +262,15 @@ class PlayerController extends Controller
 			foreach ($player->careers as $career)
 				$career->delete();
 			
-			foreach ($player->photos as $photo)
+			foreach ($player->photos as $photo) {
+				$path = app()->publicPath() . DIRECTORY_SEPARATOR . "upload" . DIRECTORY_SEPARATOR . $photo->path;
 				$photo->delete();
+				
+				if (file_exists($path)) {
+					$fs = new Filesystem();
+					$fs->delete($path);
+				}
+			}
 			
 			$player->delete();
 			

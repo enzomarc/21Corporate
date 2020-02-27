@@ -27,7 +27,7 @@
 
             <div class="panel-heading">
                 <div class="panel-title">
-                    Informations personelles
+                    Informations personnelles
                 </div>
 
                 <div class="panel-options">
@@ -429,6 +429,81 @@
     </div>
     <!-- End add achievement modal -->
 
+
+    <!-- Photos -->
+    <div class="row">
+        <div class="panel panel-primary" data-collapsed="0">
+
+            <div class="panel-heading">
+                <div class="panel-title">
+                    Photos
+                </div>
+
+                <div class="panel-options">
+                    <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg"><i class="entypo-cog"></i></a>
+                    <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div class="row" style="float: right; padding: 15px">
+                    <button onclick="$('#photo_modal').modal('show');" class="btn btn-primary btn-icon">
+                        Ajouter une photo
+                        <i class="entypo-plus-squared"></i>
+                    </button>
+                </div>
+
+                <table class="table table-bordered" id="photos-table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Aperçu</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Add photo modal -->
+    <div class="modal fade" id="photo_modal" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Ajouter une photo du joueur</h4>
+                </div>
+
+                <form method="post" id="photo_form">
+                    <div class="modal-body twelve columns">
+                        <div class="row">
+                            <div class="col-md-12" style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                                <img src="" alt="tmp" id="tmpshot" style="display: none" width="500">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="file" id="image" name="image" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-info">Ajouter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End add photo modal -->
+
     <div class="row footer" style="display: flex; justify-content: flex-end; padding: 0 20px 40px 0">
         <button class="btn btn-success btn-lg btn-icon" id="submit">
             Ajouter
@@ -442,13 +517,14 @@
     <script>
         let careers = [];
         let achievements = [];
+        let photos = [];
 
         $("#career_form").submit((e) => {
             e.stopPropagation();
             e.preventDefault();
 
-            const contract_start = $('#contract_start').val();
-            const contract_end = $('#contract_end').val();
+            const contract_start = $('#contract_start').val().replace('-', '/');
+            const contract_end = $('#contract_end').val().replace('-', '/');
             const club = $('#club').val();
             const current_club = $('#club_current').val();
             const country = $('#country').val();
@@ -515,6 +591,18 @@
         }
 
         /**
+         * Refresh the player photos table
+         */
+        function refreshPhotosTable() {
+            const table = $('#photos-table tbody')[0];
+            table.innerHTML = "";
+
+            _.each(photos, (photo) => {
+                table.innerHTML += '<tr><td>'+ photo.id +'</td><td><img height="64" width="64" src="/upload/'+ photo.path +'" alt="image"></td><td><button class="btn btn-danger" onclick="deletePhoto('+ photo.id +')" data-photo="'+ photo.id +'">Supprimer</button></td></tr>';
+            });
+        }
+
+        /**
          * Delete career in careers collection.
          *
          * @param id
@@ -538,6 +626,31 @@
             });
 
             refreshAccomplishmentsTable();
+        }
+
+        /**
+         * Delete photo in photos collection.
+         *
+         * @param id
+         */
+        function deletePhoto(id) {
+            $.ajax({
+                url: "/admin/photos/" + id,
+                method: "DELETE",
+                success: (response) => {
+                    toastr.success(response.message, 'Photo supprimée');
+
+                    photos = _.reject(photos, (photo) => {
+                        return photo.id === id;
+                    });
+
+                    refreshPhotosTable();
+                },
+                error: (response) => {
+                    console.log(response);
+                    toastr.error(response.responseJSON.message, 'Erreur');
+                }
+            });
         }
 
         $('#submit').click(() => {
@@ -570,7 +683,8 @@
                     foot: $('#foot').val(),
                     profile: $('#profile').val(),
                     careers: careers,
-                    achievements: achievements
+                    achievements: achievements,
+                    photos: photos
                 },
                 success: (response) => {
                     toastr.success(response.message + " Rechargez la page si vous voulez ajouter un nouveau joueur.", "Nouveau joueur ajouté");
@@ -589,6 +703,46 @@
                     }
                 }
             });
+        });
+
+        $('#photo_form').submit((e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const data = new FormData($('#photo_form')[0]);
+
+            $.ajax({
+                url: "{{ route('photos.store') }}",
+                method: "POST",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: (response) => {
+                    photos.push(response.photo);
+                    toastr.success(response.message, "Photo ajoutée");
+                    refreshPhotosTable();
+                    $('#photo_modal').modal('hide');
+                },
+                error: (response) => {
+                    toastr.error(response.responseJSON.message, 'Erreur');
+                    console.log(response);
+                    $('#photo_modal').modal('hide');
+                }
+            });
+        });
+
+        $('#image').change(function () {
+            const file = $(this)[0].files[0];
+            const reader = new FileReader();
+
+            reader.addEventListener("load", function () {
+                $('#tmpshot')[0].src = reader.result;
+                $('#tmpshot').fadeIn(300);
+            });
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
         });
 
         // Load select countries.

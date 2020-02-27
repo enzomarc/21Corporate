@@ -28,6 +28,7 @@ Route::get('news', 'PostController@all')->name('news.all');
 Route::get('news/{slug}', 'PostController@single')->name('news.single');
 Route::get('tags', 'PostController@tags')->name('news.tags');
 Route::get('players', 'PlayerController@all')->name('players');
+Route::get('players/{player}', 'PlayerController@single')->name('players.single');
 
 
 // Admin authentication routes
@@ -52,5 +53,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 	
 	// Players
 	Route::resource('players', 'PlayerController');
+	Route::post('photos', 'PhotoController@store')->name('photos.store');
+	Route::delete('photos/{photo}', 'PhotoController@destroy')->name('photos.delete');
 	
 });
