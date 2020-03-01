@@ -11,8 +11,8 @@
 |
 */
 	
-	use Illuminate\Support\Facades\DB;
-	use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
@@ -24,11 +24,17 @@ Route::get('about', function () {
 	return view('about', ['page' => 'about', 'info' => $info]);
 })->name('about');
 
+// News
 Route::get('news', 'PostController@all')->name('news.all');
 Route::get('news/{slug}', 'PostController@single')->name('news.single');
 Route::get('tags', 'PostController@tags')->name('news.tags');
+// Players
 Route::get('players', 'PlayerController@all')->name('players');
 Route::get('players/{player}', 'PlayerController@single')->name('players.single');
+// Events
+Route::get('events', 'EventController@all')->name('events');
+Route::get('events/{event}', 'EventController@single')->name('events.single');
+Route::post('events/{event}', 'EventController@subscribe')->name('events.subscribe');
 
 
 // Admin authentication routes
@@ -55,5 +61,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 	Route::resource('players', 'PlayerController');
 	Route::post('photos', 'PhotoController@store')->name('photos.store');
 	Route::delete('photos/{photo}', 'PhotoController@destroy')->name('photos.delete');
+	
+	// Events
+	Route::resource('events', 'EventController')->except('update');
+	Route::post('events/{event}', 'EventController@update')->name('events.update');
 	
 });

@@ -122,6 +122,12 @@
                         <span class="title">Joueurs</span>
                     </a>
                 </li>
+                <li data-page="events">
+                    <a href="{{ route('events.index') }}">
+                        <i class="entypo-location"></i>
+                        <span class="title">Evènements</span>
+                    </a>
+                </li>
                 <li data-page="unknown" class="has-sub">
                     <a href="#">
                         <i class="entypo-flow-tree"></i>
@@ -841,7 +847,7 @@
     const page = "{{ $page ?? '' }}".toLowerCase();
 
     _.each(items, (item) => {
-        if (item.dataset['page'].toLowerCase() === page)
+        if (item.dataset['page'] && item.dataset['page'].toLowerCase() === page)
             item.classList.add('active');
     });
 </script>

@@ -6,12 +6,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>21Corporate</title>
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
     <link href="/css/akslider.css" rel="stylesheet" type="text/css"/>
     <link href="/css/donate.css" rel="stylesheet" type="text/css"/>
     <link href="/css/theme.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/toastr.min.css" rel="stylesheet" type="text/css"/>
     <script type='text/javascript'
             src='http://ajax.googleapis.com/ajax/libs/mootools/1.3.1/mootools-yui-compressed.js'></script>
 
@@ -59,7 +61,7 @@
                         <li class="uk-parent uk-active" data-page="home" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="{{ route('home') }}">Accueil</a></li>
                         <li data-page="about" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="{{ route('about') }}">A Propos</a></li>
                         <li data-page="players"><a href="{{ route('players') }}">Joueurs</a></li>
-                        <li data-page="match"><a href="{{ route('players') }}">Matchs</a></li>
+                        <li data-page="events"><a href="{{ route('events') }}">Evènements</a></li>
                         <li data-page="news"><a href="{{ route('news.all') }}">Actualités</a></li>
                         <li data-page="shop"><a href="/category.html">Boutique</a></li>
                         <li data-page="contact"><a href="/contact.html">Contact</a></li>
@@ -404,10 +406,17 @@
 <script type="text/javascript" src="/js/isotope.pkgd.min.js"></script>
 <script type="text/javascript" src="/js/components/accordion.js"></script>
 <script type="text/javascript" src="/js/underscore.js"></script>
+<script src="/assets/js/toastr.js"></script>
 
 <script type="text/javascript" src="/js/theme.js"></script>
 <script type="text/javascript">
     window.$ = jQuery;
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
     $('ul.uk-navbar-nav li.uk-active').removeClass('uk-active');
     const items = $('ul.uk-navbar-nav li');

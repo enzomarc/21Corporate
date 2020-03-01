@@ -10,7 +10,7 @@
                             <img class="uk-invisible" src="images/head-bg.jpg" alt="" height="290" width="1920">
                             <div class="uk-position-cover uk-flex uk-flex-center head-title">
                                 <h1>
-                                    Actualités
+                                    Evènements
                                 </h1>
                             </div>
                         </div>
@@ -24,7 +24,7 @@
     <div class="uk-container uk-container-center alt">
         <ul class="uk-breadcrumb">
             <li><a href="{{ route('home') }}">Accueil</a></li>
-            <li class="uk-active"><span>Actualités</span></li>
+            <li class="uk-active"><span>Evènements</span></li>
         </ul>
     </div>
 
@@ -35,22 +35,22 @@
                 <div class="contentpaneopen">
                     <main id="tm-content" class="tm-content">
                         <div class="uk-grid" data-uk-grid-match="">
-                            @foreach($posts as $post)
+                            @foreach($events as $event)
                                 <div class="uk-width-large-1-3 uk-width-medium-2-4 uk-width-small-2-4 list-article uk-flex uk-flex-column">
                                     <div class="wrapper">
                                         <div class="img-wrap uk-flex-wrap-top">
-                                            <a href="{{ route('news.single', ['slug' => $post->slug]) }}">
-                                                <img src="/{{ str_replace('public', 'storage', $post->image) }}" class="img-polaroid" alt="">
+                                            <a href="{{ route('events.single', ['event' => $event]) }}">
+                                                <img src="/upload/{{ $event->image }}" class="img-polaroid" alt="">
                                             </a>
                                         </div>
                                         <div class="info uk-flex-wrap-middle">
                                             <div class="date">
-                                                {{ date('D, d M Y', strtotime($post->created_at)) }}
+                                                {{ date('D, d M Y', strtotime($event->start_date)) }}
                                             </div>
                                             <div class="name">
                                                 <h4>
-                                                    <a href="{{ route('news.single', ['slug' => $post->slug]) }}">
-                                                        {{ $post->title }}
+                                                    <a href="{{ route('events.single', ['event' => $event]) }}">
+                                                        {{ $event->title }}
                                                     </a>
                                                 </h4>
                                             </div>
@@ -60,8 +60,8 @@
                                         </div>
                                     </div>
                                     <div class="article-actions uk-flex-wrap-bottom">
-                                        <div class="count"><i class="uk-icon-user"></i><span style="font-size: 9px">by {{ $post->author }}</span></div>
-                                        <div class="read-more"><a href="{{ route('news.single', ['slug' => $post->slug]) }}">Lire plus</a></div>
+                                        <div class="count"><i class="uk-icon-users"></i><span style="font-size: 9px">{{ $event->id }} participant(s)</span></div>
+                                        <div class="read-more"><a href="{{ route('events.single', ['event' => $event]) }}">Consulter</a></div>
                                     </div>
                                 </div>
                             @endforeach

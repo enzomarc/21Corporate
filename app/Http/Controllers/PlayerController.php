@@ -86,8 +86,8 @@ class PlayerController extends Controller
 			$page = 'players';
 			$player = Player::with(['achievements', 'careers', 'photos'])->findOrFail($player);
 			
-			$player->date_of_birth = date_format(new \DateTime($player->date_of_birth), 'Y-m-d');
-			$player->contract_expiration = date_format(new \DateTime($player->contract_expiration), 'Y-m-d');
+			$player->date_of_birth = date('Y-m-d', strtotime($player->date_of_birth));
+			$player->contract_expiration = date('Y-m-d', strtotime($player->contract_expiration));
 			$player->eu_passport = $player->eu_passport == true ? "1" : "0";
 			$player->positions = json_decode($player->positions);
 			
