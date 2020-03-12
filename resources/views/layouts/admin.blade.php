@@ -128,6 +128,12 @@
                         <span class="title">Evènements</span>
                     </a>
                 </li>
+                <li data-page="gallery">
+                    <a href="{{ route('gallery') }}">
+                        <i class="entypo-camera"></i>
+                        <span class="title">Gallerie</span>
+                    </a>
+                </li>
                 <li data-page="unknown" class="has-sub">
                     <a href="#">
                         <i class="entypo-flow-tree"></i>
@@ -813,6 +819,7 @@
 <!-- Bottom scripts (common) -->
 <script src="/assets/js/gsap/TweenMax.min.js"></script>
 <script src="/assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+<script src="/assets/js/datatables/datatables.js"></script>
 <script src="/assets/js/bootstrap.js"></script>
 <script src="/assets/js/joinable.js"></script>
 <script src="/assets/js/resizeable.js"></script>
@@ -827,14 +834,15 @@
 <script src="/assets/js/rickshaw/vendor/d3.v3.js"></script>
 <script src="/assets/js/rickshaw/rickshaw.min.js"></script>
 <script src="/assets/js/neon-chat.js"></script>
+<script src="/assets/js/toastr.js"></script>
+<script type="text/javascript" src="/js/underscore.js"></script>
+
 
 <!-- JavaScripts initializations and stuff -->
 <script src="/assets/js/neon-custom.js"></script>
 
 <!-- Demo Settings -->
 <script src="/assets/js/neon-demo.js"></script>
-<script src="/assets/js/toastr.js"></script>
-<script type="text/javascript" src="/js/underscore.js"></script>
 
 <script>
     $.ajaxSetup({

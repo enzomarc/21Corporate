@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index',  ['page' => 'home']);
+	$photos = DB::table('gallery')->get();
+    return view('index',  ['page' => 'home', 'photos' => $photos]);
 })->name('home');
 
 Route::get('about', function () {
@@ -65,4 +66,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 	Route::resource('events', 'EventController')->except('update');
 	Route::post('events/{event}', 'EventController@update')->name('events.update');
 	
+	// Gallery
+	Route::get('gallery', 'GalleryController@index')->name('gallery');
+	Route::post('gallery', 'GalleryController@store')->name('gallery.store');
+	Route::delete('gallery/{photo}', 'GalleryController@delete')->name('gallery.delete');
 });

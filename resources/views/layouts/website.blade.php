@@ -366,7 +366,7 @@
                                         <li class="item-169"><a href="{{ route('news.all') }}">Actualités</a></li>
                                     </ul>
                                 </div>
-                                <div class="copyrights">Copyright © 2015 <a href="/">Sportak Team</a>. All Rights Reserved.</div>
+                                <div class="copyrights">Copyright © 2020 <a href="/">Licon Corp</a>. Tous droits réservés.</div>
                                 <div class="clear"></div>
                             </div>
                         </div>
