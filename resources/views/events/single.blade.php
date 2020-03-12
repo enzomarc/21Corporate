@@ -24,7 +24,7 @@
     <div class="uk-container uk-container-center alt">
         <ul class="uk-breadcrumb">
             <li><a href="{{ route('home') }}">Accueil</a></li>
-            <li><a href="{{ route('news.all') }}">Evènement</a></li>
+            <li><a href="{{ route('events') }}">Evènements</a></li>
             <li class="uk-active"><span>{{ $event->title }}</span></li>
         </ul>
     </div>
@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="author">
                                     <i class="uk-icon-users"></i>
-                                    <a class="filter-link" href="#" rel="nofollow">{{ $event->id }} participant(s)</a>
+                                    <a class="filter-link" href="#" rel="nofollow">{{ $event->subscriptions . ' ' . \Illuminate\Support\Str::plural('participant', $event->subscriptions) }}</a>
                                 </div>
                             </div>
                             <div class="article-single-text">

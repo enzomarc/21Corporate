@@ -60,7 +60,7 @@
                                         </div>
                                     </div>
                                     <div class="article-actions uk-flex-wrap-bottom">
-                                        <div class="count"><i class="uk-icon-users"></i><span style="font-size: 9px">{{ $event->id }} participant(s)</span></div>
+                                        <div class="count"><i class="uk-icon-users"></i><span style="font-size: 9px">{{ $event->subscriptions . ' ' . \Illuminate\Support\Str::plural('participant', $event->subscriptions) }}</span></div>
                                         <div class="read-more"><a href="{{ route('events.single', ['event' => $event]) }}">Consulter</a></div>
                                     </div>
                                 </div>

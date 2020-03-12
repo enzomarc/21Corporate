@@ -19,6 +19,11 @@ class EventController extends Controller
 		$events = Event::all();
 		$page = 'events';
 		
+		$events->transform(function (Event $event) {
+			$event->subscriptions = DB::table('subscriptions')->where('event', $event->id)->count();
+			return $event;
+		});
+		
 		return view('events.index', compact('events', 'page'));
 	}
 	
@@ -31,6 +36,7 @@ class EventController extends Controller
 	public function single(Event $event)
 	{
 		$page = 'events';
+		$event->subscriptions = DB::table('subscriptions')->where('event', $event->id)->count();
 		
 		return view('events.single', compact('event', 'page'));
 	}
@@ -73,6 +79,11 @@ class EventController extends Controller
 	{
 		$events = Event::all();
 		$page = 'events';
+		
+		$events->transform(function (Event $event) {
+			$event->subscriptions = DB::table('subscriptions')->where('event', $event->id)->count();
+			return $event;
+		});
 		
 		return view('admin.events.index', compact('events', 'page'));
 	}

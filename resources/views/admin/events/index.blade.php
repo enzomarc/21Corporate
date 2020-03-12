@@ -29,6 +29,7 @@
             <th>Titre de l'evènement</th>
             <th>Date de début</th>
             <th>Date de fin</th>
+            <th>Participant(s)</th>
             <th></th>
         </tr>
         </thead>
@@ -39,6 +40,7 @@
                     <td>{{ $event->title }}</td>
                     <td>{{ date('d/m/Y', strtotime($event->start_date)) }}</td>
                     <td>{{ date('d/m/Y', strtotime($event->end_date)) }}</td>
+                    <td>{{ $event->subscriptions }}</td>
                     <td>
                         <a href="{{ route('events.edit', ['event' => $event]) }}" class="btn btn-sm btn-primary btn-icon">
                             Modifier
